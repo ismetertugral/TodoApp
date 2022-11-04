@@ -38,3 +38,8 @@ git push uzakDepoTakmaAdi uzakDepoBranch
 git stash , git stash list , git stash pop
 git clone /depoDiziniYolu , git kullaniciadi@host:kullaniciadi/depoAdi.git -example git clone git@gitlab.com:prdsmehmetstc/test-project.git
 git pull
+
+git branch-m main master
+git fetch origin
+git branch -u origin/master master
+git remote set-head origin -a
