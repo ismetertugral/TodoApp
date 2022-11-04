@@ -1,0 +1,19 @@
+LastFix = --project coldplayz.TodoAppNTier.DataAccess --startup-project coldplayz.TodoAppNTier.UI
+//Example
+dotnet ef migrations add InitialCreate --project coldplayz.TodoAppNTier.DataAccess --startup-project coldplayz.TodoAppNTier.UI --output-dir Migrations
+dotnet ef migrations remove --project coldplayz.TodoAppNTier.DataAccess --startup-project coldplayz.TodoAppNTier.UI
+dotnet ef database update --project coldplayz.TodoAppNTier.DataAccess --startup-project coldplayz.TodoAppNTier.UI
+
+Nuget Package Manager init package.json
+//Example
+npm init
+
+{
+  "name": "asp.net",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "bootstrap": "5.2.2"
+  }
+}
+

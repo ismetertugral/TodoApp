@@ -1,0 +1,12 @@
+C:\pr\pr2\coldplayz.TodoAppNTier.Entities\bin\Debug\net6.0\coldplayz.TodoAppNTier.Entities.deps.json
+C:\pr\pr2\coldplayz.TodoAppNTier.Entities\bin\Debug\net6.0\coldplayz.TodoAppNTier.Entities.dll
+C:\pr\pr2\coldplayz.TodoAppNTier.Entities\bin\Debug\net6.0\coldplayz.TodoAppNTier.Entities.pdb
+C:\pr\pr2\coldplayz.TodoAppNTier.Entities\obj\Debug\net6.0\coldplayz.TodoAppNTier.Entities.csproj.AssemblyReference.cache
+C:\pr\pr2\coldplayz.TodoAppNTier.Entities\obj\Debug\net6.0\coldplayz.TodoAppNTier.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\pr\pr2\coldplayz.TodoAppNTier.Entities\obj\Debug\net6.0\coldplayz.TodoAppNTier.Entities.AssemblyInfoInputs.cache
+C:\pr\pr2\coldplayz.TodoAppNTier.Entities\obj\Debug\net6.0\coldplayz.TodoAppNTier.Entities.AssemblyInfo.cs
+C:\pr\pr2\coldplayz.TodoAppNTier.Entities\obj\Debug\net6.0\coldplayz.TodoAppNTier.Entities.csproj.CoreCompileInputs.cache
+C:\pr\pr2\coldplayz.TodoAppNTier.Entities\obj\Debug\net6.0\coldplayz.TodoAppNTier.Entities.dll
+C:\pr\pr2\coldplayz.TodoAppNTier.Entities\obj\Debug\net6.0\refint\coldplayz.TodoAppNTier.Entities.dll
+C:\pr\pr2\coldplayz.TodoAppNTier.Entities\obj\Debug\net6.0\coldplayz.TodoAppNTier.Entities.pdb
+C:\pr\pr2\coldplayz.TodoAppNTier.Entities\obj\Debug\net6.0\ref\coldplayz.TodoAppNTier.Entities.dll

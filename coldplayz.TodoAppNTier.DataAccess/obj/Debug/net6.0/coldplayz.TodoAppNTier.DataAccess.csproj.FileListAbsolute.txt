@@ -1,0 +1,17 @@
+C:\pr\pr2\coldplayz.TodoAppNTier.DataAccess\bin\Debug\net6.0\coldplayz.TodoAppNTier.DataAccess.deps.json
+C:\pr\pr2\coldplayz.TodoAppNTier.DataAccess\bin\Debug\net6.0\coldplayz.TodoAppNTier.DataAccess.runtimeconfig.json
+C:\pr\pr2\coldplayz.TodoAppNTier.DataAccess\bin\Debug\net6.0\coldplayz.TodoAppNTier.DataAccess.dll
+C:\pr\pr2\coldplayz.TodoAppNTier.DataAccess\bin\Debug\net6.0\coldplayz.TodoAppNTier.DataAccess.pdb
+C:\pr\pr2\coldplayz.TodoAppNTier.DataAccess\bin\Debug\net6.0\coldplayz.TodoAppNTier.Entities.dll
+C:\pr\pr2\coldplayz.TodoAppNTier.DataAccess\bin\Debug\net6.0\coldplayz.TodoAppNTier.Entities.pdb
+C:\pr\pr2\coldplayz.TodoAppNTier.DataAccess\obj\Debug\net6.0\coldplayz.TodoAppNTier.DataAccess.csproj.AssemblyReference.cache
+C:\pr\pr2\coldplayz.TodoAppNTier.DataAccess\obj\Debug\net6.0\coldplayz.TodoAppNTier.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\pr\pr2\coldplayz.TodoAppNTier.DataAccess\obj\Debug\net6.0\coldplayz.TodoAppNTier.DataAccess.AssemblyInfoInputs.cache
+C:\pr\pr2\coldplayz.TodoAppNTier.DataAccess\obj\Debug\net6.0\coldplayz.TodoAppNTier.DataAccess.AssemblyInfo.cs
+C:\pr\pr2\coldplayz.TodoAppNTier.DataAccess\obj\Debug\net6.0\coldplayz.TodoAppNTier.DataAccess.csproj.CoreCompileInputs.cache
+C:\pr\pr2\coldplayz.TodoAppNTier.DataAccess\obj\Debug\net6.0\coldplayz.TodoAppNTier.DataAccess.csproj.CopyComplete
+C:\pr\pr2\coldplayz.TodoAppNTier.DataAccess\obj\Debug\net6.0\coldplayz.TodoAppNTier.DataAccess.dll
+C:\pr\pr2\coldplayz.TodoAppNTier.DataAccess\obj\Debug\net6.0\refint\coldplayz.TodoAppNTier.DataAccess.dll
+C:\pr\pr2\coldplayz.TodoAppNTier.DataAccess\obj\Debug\net6.0\coldplayz.TodoAppNTier.DataAccess.pdb
+C:\pr\pr2\coldplayz.TodoAppNTier.DataAccess\obj\Debug\net6.0\coldplayz.TodoAppNTier.DataAccess.genruntimeconfig.cache
+C:\pr\pr2\coldplayz.TodoAppNTier.DataAccess\obj\Debug\net6.0\ref\coldplayz.TodoAppNTier.DataAccess.dll
