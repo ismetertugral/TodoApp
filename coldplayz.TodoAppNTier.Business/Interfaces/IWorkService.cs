@@ -12,7 +12,7 @@ namespace coldplayz.TodoAppNTier.Business.Interfaces
 
         Task Create(WorkCreateDto dto);
 
-        Task<WorkListDto> GetById(object id);
+        Task<WorkListDto> GetById(int id);
 
         Task Remove(object id);
 

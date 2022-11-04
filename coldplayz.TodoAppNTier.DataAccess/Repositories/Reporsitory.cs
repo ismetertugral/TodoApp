@@ -21,7 +21,7 @@ namespace coldplayz.TodoAppNTier.DataAccess.Repositories
         }
         
         public async Task<T> GetByFilter(Expression<Func<T, bool>> filter, bool asNoTracking = false){
-            return asNoTracking? await _context.Set<T>().SingleOrDefaultAsync() : await _context.Set<T>().AsNoTracking().SingleOrDefaultAsync();
+            return asNoTracking? await _context.Set<T>().SingleOrDefaultAsync(filter) : await _context.Set<T>().AsNoTracking().SingleOrDefaultAsync(filter);
         }   
         public async Task<T> GetById(object id){
             return await _context.Set<T>().FindAsync(id);

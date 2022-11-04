@@ -30,9 +30,9 @@ namespace coldplayz.TodoAppNTier.Business.Services
             await _uow.SaveChanges();
         }
 
-        public async Task<WorkListDto> GetById(object id)
+        public async Task<WorkListDto> GetById(int id)
         {
-            var data = await _uow.GetRepository<Work>().GetById(id);
+            var data = await _uow.GetRepository<Work>().GetByFilter(x=>x.Id==id);
             return new() { Definition = data.Definition, Id = data.Id, IsCompleted = data.IsCompleted };
         }
 

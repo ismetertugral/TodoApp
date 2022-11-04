@@ -1,0 +1,29 @@
+@model WorkUpdateDto
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Todo App</title>
+    <link rel="stylesheet" href="~/node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container my-2">
+        <form asp-action="Update" asp-controller="Home" method="post">
+            <input type="hidden" asp-for="@Model.Id" />
+            <div class="mb-3">
+                <label>İşin Tanımı :</label>
+                <input asp-for="@Model.Definition" class="form-control"/>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" asp-for="@Model.IsCompleted" />
+                <label class="form-check-label" for="IsCompleted">Tamamlandı mı</label>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-primary" type="submit">Kaydet</button>
+            </div>
+            <div class="text-danger" asp-validation-summary="All"></div>
+        </form>
+    </div>
+</body>
+
+</html>
