@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDependencies();
 builder.Services.AddControllersWithViews();
 
-var app = builder.Build();
+var app = builder.Build(); 
 
 app.UseStaticFiles(new StaticFileOptions{
     FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "node_modules")),
