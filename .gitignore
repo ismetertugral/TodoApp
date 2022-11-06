@@ -395,6 +395,7 @@ _UpgradeReport_Files/
 bin/
 obj/
 TestResults/
+.vscode/
 ###################
 # Web publish log #
 ###################
