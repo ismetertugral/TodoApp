@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using coldplayz.TodoAppNTier.DataAccess.Interfaces;
 using coldplayz.TodoAppNTier.DataAccess.Contexts;
 using coldplayz.TodoAppNTier.DataAccess.Repositories;
+using coldplayz.TodoAppNTier.Entities.Domains;
 
 namespace coldplayz.TodoAppNTier.DataAccess.UnitofWork
 {
@@ -17,7 +18,8 @@ namespace coldplayz.TodoAppNTier.DataAccess.UnitofWork
             _context = context;
         }
 
-        public IRepository<T> GetRepository<T>() where T: class,new(){
+        public IRepository<T> GetRepository<T>() where T: BaseEntity
+        {
             return new Repository<T>(_context);
         }
         public async Task SaveChanges(){

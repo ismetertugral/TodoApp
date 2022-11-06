@@ -3,10 +3,12 @@ using coldplayz.TodoAppNTier.DataAccess.Contexts;
 using Microsoft.EntityFrameworkCore;
 using System.Runtime.CompilerServices;
 using System.Linq.Expressions;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using coldplayz.TodoAppNTier.Entities.Domains;
 
 namespace coldplayz.TodoAppNTier.DataAccess.Repositories
 {
-    public class Repository<T> : IRepository<T> where T: class, new()
+    public class Repository<T> : IRepository<T> where T: BaseEntity
     {
         private readonly TodoContext _context;
         public Repository(TodoContext context)
@@ -27,7 +29,9 @@ namespace coldplayz.TodoAppNTier.DataAccess.Repositories
             return await _context.Set<T>().FindAsync(id);
         }     
         public void Update(T entity){
-            _context.Set<T>().Update(entity);
+            var updatedEntity = _context.Set<T>().Find(entity.Id);
+            _context.Entry(updatedEntity).CurrentValues.SetValues(entity);
+            // _context.Set<T>().Update(entity);
         }
         public void Remove(T entity){
             _context.Set<T>().Remove(entity);

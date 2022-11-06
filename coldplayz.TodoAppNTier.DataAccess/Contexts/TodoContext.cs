@@ -5,6 +5,7 @@ using coldplayz.TodoAppNTier.DataAccess.Configurations;
 namespace coldplayz.TodoAppNTier.DataAccess.Contexts{
     public class TodoContext : DbContext
     {
+                
         public TodoContext(DbContextOptions<TodoContext> options) : base(options) 
         {
 
