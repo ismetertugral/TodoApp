@@ -14,7 +14,7 @@ namespace coldplayz.TodoAppNTier.Business.Interfaces
 
         Task<WorkListDto> GetById(int id);
 
-        Task Remove(object id);
+        Task Remove(int id);
 
         Task Update(WorkUpdateDto dto);
     }

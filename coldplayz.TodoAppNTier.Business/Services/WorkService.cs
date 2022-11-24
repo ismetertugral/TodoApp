@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using coldplayz.TodoAppNTier.Business.Interfaces;
 using coldplayz.TodoAppNTier.DataAccess.UnitofWork;
 using coldplayz.TodoAppNTier.Dtos.WorkDtos;
@@ -12,53 +13,38 @@ namespace coldplayz.TodoAppNTier.Business.Services
     public class WorkService : IWorkService
     {
         private readonly IUow _uow;
-        public WorkService(IUow uow)
+        private readonly IMapper _mapper;
+        public WorkService(IUow uow, IMapper mapper)
         {
             _uow = uow;
+            _mapper = mapper;
         }
 
         public async Task Update(WorkUpdateDto dto)
         {
-            _uow.GetRepository<Work>().Update(new() { Definition = dto.Definition, Id = dto.Id, IsCompleted = dto.IsCompleted });
+            _uow.GetRepository<Work>().Update(_mapper.Map<Work>(dto));
             await _uow.SaveChanges();
         }
 
-        public async Task Remove(object id)
+        public async Task Remove(int id)
         {
-            var deletedWork = await _uow.GetRepository<Work>().GetById(id);
-            _uow.GetRepository<Work>().Remove(deletedWork);
+            _uow.GetRepository<Work>().Remove(id);
             await _uow.SaveChanges();
         }
 
         public async Task<WorkListDto> GetById(int id)
         {
-            var data = await _uow.GetRepository<Work>().GetByFilter(x=>x.Id==id);
-            return new() { Definition = data.Definition, Id = data.Id, IsCompleted = data.IsCompleted };
+            return _mapper.Map<WorkListDto>(await _uow.GetRepository<Work>().GetByFilter(x=>x.Id==id));
         }
 
         public async Task Create(WorkCreateDto dto)
         {
-            await _uow.GetRepository<Work>().Create(new() { Definition = dto.Definition, IsCompleted = dto.IsCompleted });
+            await _uow.GetRepository<Work>().Create(_mapper.Map<Work>(dto));
             await _uow.SaveChanges();
         }
         public async Task<List<WorkListDto>> GetAll()
         {
-            var list = await _uow.GetRepository<Work>().GetAll();
-
-            var mappedList = new List<WorkListDto>();
-            if (list != null && list.Count > 0)
-            {
-                foreach (var work in list)
-                {
-                    mappedList.Add(new()
-                    {
-                        Definition = work.Definition,
-                        Id = work.Id,
-                        IsCompleted = work.IsCompleted
-                    });
-                }
-            }
-            return mappedList;
+            return _mapper.Map<List<WorkListDto>>(await _uow.GetRepository<Work>().GetAll());
         }
     }
 }

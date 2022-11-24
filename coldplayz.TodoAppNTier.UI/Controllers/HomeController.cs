@@ -5,16 +5,18 @@ using System.Threading.Tasks;
 using coldplayz.TodoAppNTier.Business.Interfaces;
 using coldplayz.TodoAppNTier.Dtos.WorkDtos;
 using Microsoft.AspNetCore.Mvc;
+using AutoMapper;
 
 namespace coldplayz.TodoAppNTier.UI.Controllers
 {
     public class HomeController : Controller
     {
         private readonly IWorkService _workService;
-
-        public HomeController(IWorkService workService)
+        private readonly IMapper _mapper;
+        public HomeController(IWorkService workService, IMapper mapper)
         {
             _workService = workService;
+            _mapper = mapper;
         }
 
         public async Task<IActionResult> Index()
@@ -42,7 +44,7 @@ namespace coldplayz.TodoAppNTier.UI.Controllers
         public async Task<IActionResult> Update(int id)
         {
             var dto = await _workService.GetById(id);
-            return View(new WorkUpdateDto { Definition = dto.Definition, Id = dto.Id, IsCompleted = dto.IsCompleted });
+            return View(_mapper.Map<WorkUpdateDto>(dto));
         }
 
         [HttpPost]
@@ -54,6 +56,12 @@ namespace coldplayz.TodoAppNTier.UI.Controllers
                 return RedirectToAction("Index");
             }
             return View(dto);
+        }
+
+        public async Task<IActionResult> Remove(int id)
+        {
+            await _workService.Remove(id);
+            return RedirectToAction("Index");
         }
     }
 }
