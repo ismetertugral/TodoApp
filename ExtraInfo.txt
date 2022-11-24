@@ -32,7 +32,8 @@ git checkout -- dosyaAdi
 git reset HEAD dosyaAdi
 git checkout -- dosyaAdi
 git checkout 95a6e33d877afbfe6e43419996cda613bdd4936a -- . (git log)
-git remote add takmaAd depoAdresi -example git remote add https://gitlab.com/prdsmehmetstc/test-project.git
+git remote add takmaAd depoAdresi -example git remote add https://gitlab.com/prdsmehmetstc/test-project.git -example git remote add origin git@github.com:ismetertugral/BookStoreApi.git
+
 git branch dalAdi , git checkout dalAdi , git branch -d dalAdi , git branch --all , git diff dal1 dal2 , git merge dalAdi
 git push uzakDepoTakmaAdi uzakDepoBranch
 git stash , git stash list , git stash pop
@@ -44,5 +45,6 @@ git fetch origin
 git branch -u origin/master master
 git remote set-head origin -a
 
+//Eğer ignore ve attributes çalışmazsa
 git rm -rf --cached .
 git add .
